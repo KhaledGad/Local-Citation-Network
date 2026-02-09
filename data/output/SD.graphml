@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d4" for="node" attr.name="title" attr.type="string" />
+  <key id="d3" for="node" attr.name="doi" attr.type="string" />
+  <key id="d2" for="node" attr.name="pub_year" attr.type="long" />
+  <key id="d1" for="node" attr.name="rtf_order" attr.type="long" />
+  <key id="d0" for="node" attr.name="ref_no" attr.type="long" />
+  <graph edgedefault="directed">
+    <node id="https://openalex.org/W2970526127">
+      <data key="d0">1</data>
+      <data key="d1">1</data>
+      <data key="d2">2019</data>
+      <data key="d3">10.1109/ptc.2019.8810727</data>
+      <data key="d4">Modelling long-term electricity load demand for rural electrification planning</data>
+    </node>
+    <node id="https://openalex.org/W2959480897">
+      <data key="d0">2</data>
+      <data key="d1">2</data>
+      <data key="d2">2019</data>
+      <data key="d3">10.1016/j.esd.2019.06.005</data>
+      <data key="d4">Towards modelling diffusion mechanisms for sustainable off-grid electricity planning</data>
+    </node>
+    <node id="https://openalex.org/W1978010228">
+      <data key="d0">3</data>
+      <data key="d1">3</data>
+      <data key="d2">2009</data>
+      <data key="d3">10.1111/j.1540-5915.2008.00221.x</data>
+      <data key="d4">Bridging Practice and Theory: A Design Science Approach</data>
+    </node>
+    <node id="https://openalex.org/W2746645850">
+      <data key="d0">4</data>
+      <data key="d1">4</data>
+      <data key="d2">2017</data>
+      <data key="d3">10.1016/j.renene.2017.08.049</data>
+      <data key="d4">Rural electrification and capacity expansion with an integrated modeling approach</data>
+    </node>
+    <node id="https://openalex.org/W4309269353">
+      <data key="d0">5</data>
+      <data key="d1">5</data>
+      <data key="d2">2022</data>
+      <data key="d3">10.3390/ijerph192215077</data>
+      <data key="d4">Impact of Emerging Transport Technologies on Freight Economic and Environmental Performance: A System Dynamics View</data>
+    </node>
+    <edge source="https://openalex.org/W2959480897" target="https://openalex.org/W2746645850" />
+    <edge source="https://openalex.org/W2959480897" target="https://openalex.org/W2970526127" />
+  </graph>
+</graphml>
