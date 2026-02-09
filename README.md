@@ -31,3 +31,65 @@ source .venv/bin/activate
 # .venv\Scripts\Activate.ps1
 
 pip install -r requirements.txt
+
+---
+
+## Usage
+
+### 1) Use all references in the RTF
+
+```bash
+python src/map_rtf_internal_citations.py \
+  --rtf data/input/System Dyanmics.rtf \
+  --select all \
+  --out-prefix data/output/network
+
+### 2) Choose a range (example: refs 1–13)
+
+python src/map_rtf_internal_citations.py \
+  --rtf data/input/System Dyanmics.rtf \
+  --select 1-13 \
+  --out-prefix data/output/network_1_13
+
+### 3) Choose a custom set (example: 1,3,5–9,12)
+
+python src/map_rtf_internal_citations.py \
+  --rtf data/input/System Dyanmics.rtf \
+  --select 1,3,5-9,12 \
+  --out-prefix data/output/network_custom
+
+### Outputs
+
+--out-prefix data/output/network_custom
+
+## Visualizing the Network in Gephi
+
+Gephi is recommended for exploring and styling the citation network.
+
+### Steps
+
+1. Install Gephi  
+   https://gephi.org
+
+2. Open Gephi → **File → Open** → select your generated `.graphml` file  
+   (e.g., `data/output/network.graphml`)
+
+3. Go to **Layout** and run:
+
+   **ForceAtlas 2** (default settings are usually fine for small networks)
+
+4. Style the graph:
+
+   - Open **Appearance**
+   - Set **Node Color** → `pub_year`
+   - Set **Node Size** → **In-Degree** (papers cited most within your selected set)
+
+### What this reveals
+
+You will immediately see:
+
+- **Foundational papers** (large nodes, high in-degree)
+- **Bridges between themes** (high betweenness / central position)
+- **Citation flow over time** (older → newer via color gradient)
+
+This is especially useful for understanding methodological lineage and conceptual evolution inside your chosen bibliography.
