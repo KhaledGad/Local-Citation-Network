@@ -19,28 +19,16 @@ Citation data source: **OpenAlex** (free).
 
 ---
 
-## Folder Structure
-
-Local-Citation-Network/
-├─ src/
-│ └─ map_rtf_internal_citations.py
-├─ data/
-│ ├─ input/ # place your RTF files here
-│ └─ output/ # generated networks (gitignored)
-├─ requirements.txt
-└─ README.md
-
----
-
 ## Usage
 
 ### 1) Use all references in the RTF
 
-```bash
 python src/map_rtf_internal_citations.py \
   --rtf data/input/System Dynamics.rtf \
   --select all \
   --out-prefix data/output/network
+
+--- 
 
 ### 2) Choose a range (example: refs 1–13)
 
