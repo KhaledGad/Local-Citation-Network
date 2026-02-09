@@ -19,18 +19,16 @@ Citation data source: **OpenAlex** (free).
 
 ---
 
-## Install
+## Folder Structure
 
-Python 3.9+ recommended.
-
-```bash
-python -m venv .venv
-# macOS/Linux
-source .venv/bin/activate
-# Windows (PowerShell)
-# .venv\Scripts\Activate.ps1
-
-pip install -r requirements.txt
+Local-Citation-Network/
+├─ src/
+│ └─ map_rtf_internal_citations.py
+├─ data/
+│ ├─ input/ # place your RTF files here
+│ └─ output/ # generated networks (gitignored)
+├─ requirements.txt
+└─ README.md
 
 ---
 
@@ -40,21 +38,21 @@ pip install -r requirements.txt
 
 ```bash
 python src/map_rtf_internal_citations.py \
-  --rtf data/input/System Dyanmics.rtf \
+  --rtf data/input/System Dynamics.rtf \
   --select all \
   --out-prefix data/output/network
 
 ### 2) Choose a range (example: refs 1–13)
 
 python src/map_rtf_internal_citations.py \
-  --rtf data/input/System Dyanmics.rtf \
+  --rtf data/input/System Dynamics.rtf \
   --select 1-13 \
   --out-prefix data/output/network_1_13
 
 ### 3) Choose a custom set (example: 1,3,5–9,12)
 
 python src/map_rtf_internal_citations.py \
-  --rtf data/input/System Dyanmics.rtf \
+  --rtf data/input/System Dynamics.rtf \
   --select 1,3,5-9,12 \
   --out-prefix data/output/network_custom
 
