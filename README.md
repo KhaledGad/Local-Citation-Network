@@ -24,10 +24,7 @@ Citation data source: **OpenAlex** (free).
 ### 1) Use all references in the RTF
 
 ```bash
-python src/map_rtf_internal_citations.py \
-  --rtf data/input/System_Dynamics.rtf \
-  --select all \
-  --out-prefix data/output/SD
+python src/map_rtf_internal_citations.py --rtf data/input/System_Dynamics.rtf --select all --out-prefix data/output/SD
 ```
 
 ### 2) Choose a range (example: refs 1–13)
@@ -37,9 +34,24 @@ python src/map_rtf_internal_citations.py --rtf data/input/System_Dynamics.rtf --
 ```
 ### 3) Choose a custom set (example: 1,3,5–9,12)
 
-```
+```bash
 python src/map_rtf_internal_citations.py --rtf data/input/System_Dynamics.rtf --select 1,3,5-9,12 --out-prefix data/output/mix_SD
 ```
+
+### Outputs
+
+For e.g.:
+
+```bash
+--out-prefix data/output/SD
+```
+The following files will be created:
+
+- data/output/SD.graphml
+
+- data/output/SD_nodes.csv
+
+- data/output/SD_edges.csv
 
 ## Visualizing the Network in Gephi
 
