@@ -24,18 +24,18 @@ Citation data source: **OpenAlex** (free).
 ### 1) Use all references in the RTF
 
 ```
-python src/map_rtf_internal_citations.py --rtf data/input/System Dynamics.rtf --select all --out-prefix data/output/network
+python src/map_rtf_internal_citations.py --rtf data/input/System_Dynamics.rtf --select all --out-prefix data/output/SD
 ```
 
 ### 2) Choose a range (example: refs 1–13)
 
 ```
-python src/map_rtf_internal_citations.py --rtf data/input/System Dynamics.rtf --select 1-13 --out-prefix data/output/network_1_13
+python src/map_rtf_internal_citations.py --rtf data/input/System_Dynamics.rtf --select 1-13 --out-prefix data/output/13_SD
 ```
 ### 3) Choose a custom set (example: 1,3,5–9,12)
 
 ```
-python src/map_rtf_internal_citations.py --rtf data/input/System Dynamics.rtf --select 1,3,5-9,12 --out-prefix data/output/network_custom
+python src/map_rtf_internal_citations.py --rtf data/input/System_Dynamics.rtf --select 1,3,5-9,12 --out-prefix data/output/mix_SD
 ```
 
 ## Visualizing the Network in Gephi
